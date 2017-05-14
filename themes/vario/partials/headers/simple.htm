@@ -1,0 +1,16 @@
+description = "Simple header and nav"
+
+[viewBag]
+snippetCode = "simple-header"
+snippetName = "Simple Header"
+==
+<header id="header" class="simple-header header1">
+  <div class="hamburger-div"><i data-component="toggleme" data-target="#nav" class="kube-menu hamburger"></i></div>
+  {% partial 'headers/nav' %}
+
+  <div class="container">
+    <h1>Welcome</h1>
+    <h4>Welcome to the new theme for 2017!</h4><br>
+    <button class="button large">Button</button><span>     </span><button class="button large outline ">Button</button>
+  </div>
+</header>

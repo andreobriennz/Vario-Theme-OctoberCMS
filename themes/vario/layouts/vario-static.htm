@@ -1,0 +1,52 @@
+description = "Vario layout for static pages plugin"
+
+[staticPage]
+
+[staticMenu]
+code = "header-menu"
+==
+<!DOCTYPE html>
+<html>
+<head>
+  <title>October CMS - {{ this.page.title }}</title>
+
+  <meta name="description" content="{{ this.page.meta_description }}">
+  <meta name="title" content="{{ this.page.meta_title }}">
+  <meta name="author" content="OctoberCMS">
+
+  <link rel="icon" type="image/png" href="{{ 'assets/images/logo.png'|theme }}">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="{{ 'assets/css/kube.min.css'|theme }}">
+  <link rel="stylesheet" href="{{ 'assets/css/theme.min.css'|theme }}">
+  {% styles %}
+
+  <!-- Poppins font -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+</head>
+<body class="red-theme">
+
+  <!-- Nav -->
+  {% partial 'headers/nav' %}
+
+  <!-- Content -->
+  {% page %}
+
+  <!-- Footer -->
+  {% partial 'footers/footer-m' %}
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <script src="{{ 'assets/javascript/kube.js'|theme }}"></script>
+  <script src="{{ 'assets/javascript/theme.js'|theme }}"></script>
+
+  <link rel="stylesheet" href="{{ 'assets/fonts/font-awesome/css/font-awesome.min.css'|theme }}">
+  {% framework extras %}
+  {% scripts %}
+
+</body>
+</html>

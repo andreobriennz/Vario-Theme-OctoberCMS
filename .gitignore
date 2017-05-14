@@ -1,0 +1,12 @@
+.DS_Store
+*.log
+*.env
+
+bootstrap/
+config/
+modules/
+storage/
+vendor/
+.htaccess
+artisan
+index.php

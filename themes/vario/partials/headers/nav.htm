@@ -1,0 +1,17 @@
+description = "Nav bar"
+
+[viewBag]
+snippetCode = "nav"
+snippetName = "Nav"
+==
+<header>
+  <div class="hamburger-div"><i data-component="toggleme" data-target="#nav" class="kube-menu hamburger"></i></div>
+  <nav id="nav" class="simple-nav container nav row align-center align-middle hide">
+    <a href="/" class="logo"><img src="{{ 'assets/images/logo.png'|theme }}" alt="Logo" height="32"></a>
+    <a href="/" class="col">Home</a>
+    <a href="/about" class="col">About</a>
+    <a href="/components" class="col">Components</a>
+    <a href="/blog" class="col">Blog</a>
+    <a href="/contact" class="col">Contact</a>
+  </nav>
+</header>

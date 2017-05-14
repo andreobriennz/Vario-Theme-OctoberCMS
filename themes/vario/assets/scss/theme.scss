@@ -1,0 +1,540 @@
+// Fonts
+$sans-serif: 'Poppins', sans-serif;
+$serif: 'Roboto Slab', serif;
+
+// General color definitions
+$red: #f25f5c;
+$blue: #0B3954;
+$deep-blue: #13293D;
+
+$white: #fff;
+$light: #fafafa;
+// $dark: #031926;
+$dark: #02182B;
+$black: #393939;
+
+
+
+
+
+// Red theme
+.red-theme {
+  body {
+    background-color: $white;
+  }
+
+  header h1 {
+    color: $white;
+  }
+
+  h2 {
+    color: $dark;
+  }
+
+  p {
+    color: $dark;
+  }
+
+  button,
+  .button {
+    background-color: $blue;
+    color: $white;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: $deep-blue;
+      color: $white;
+    }
+  }
+
+  button.primary,
+  div.primary {
+    background-color: $white;
+    color: $dark;
+
+    &:hover {
+      background-color: $light;
+      color: $dark;
+    }
+  }
+
+  button.outline,
+  div.outline {
+    background: 0 0;
+    border-color: $white;
+    color: $white;
+
+    &:hover {
+      background: 0 0;
+      border-color: $blue;
+      color: $blue;
+    }
+  }
+
+  header {
+    background-color: $red;
+
+    p strong {
+      color: $deep-blue;
+    }
+
+    .hamburger {
+      color: $white;
+    }
+  }
+
+  header a,
+  header a:hover,
+  footer a,
+  footer a:hover {
+    color: $white;
+  }
+
+  footer {
+    background-color: $blue;
+    color: $white;
+
+    p,
+    a,
+    a:hover {
+      color: $white;
+    }
+  }
+
+  .grid,
+  .icon-grid {
+    background-color: $white;
+
+    i {
+      color: $deep-blue;
+    }
+
+    strong {
+      color: $deep-blue;
+    }
+  }
+
+  .pricing {
+    div {
+      border: 1px solid $blue;
+    }
+
+    .price {
+      color: $blue;
+    }
+
+    .name {
+      background-color: $blue;
+      color: $white;
+    }
+  }
+
+  .blog a:hover {
+    color: $red;
+  }
+}
+
+
+
+
+// Silver theme
+.silver-theme {
+  $light: #f9f9f9;
+  $black: #222;
+
+  body {
+    background-color: $white;
+  }
+
+  p,
+  div {
+    font-family: $serif;
+  }
+
+  strong {
+    font-family: $sans-serif;
+    font-weight: normal;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    color: $black;
+  }
+
+  $button: $deep-blue;
+  $button-hover: $dark;
+
+  $button-text: $light;
+  $button-text-hover: $light;
+
+
+  $primary-button: $white;
+  $primary-button-hover: $light;
+
+  $primary-button-text: $white;
+  $primary-button-text-hover: $white;
+
+  button,
+  .button {
+    background-color: $button;
+    color: $button-text;
+
+    &:hover {
+      background-color: $button-hover;
+      color: $button-text-hover;
+    }
+  }
+
+  button.primary,
+  div.primary {
+    background-color: $primary-button;
+    color: $primary-button-text;
+
+    &:hover {
+      background-color: $primary-button-hover;
+      color: $primary-button-text-hover;
+    }
+  }
+
+  button.outline,
+  div.outline {
+    background: 0 0;
+    border-color: $button;
+    color: $button;
+
+    &:hover {
+      border-color: $button-hover;
+      color: $button-hover;
+    }
+  }
+
+  header {
+    background-color: $light;
+
+    &.hamburger {
+      color: $black;
+    }
+  }
+
+  header a,
+  header a:hover,
+  footer a,
+  footer a:hover {
+    color: $black;
+  }
+
+  footer {
+    background-color: $light;
+    color: $black;
+
+    a,
+    a:hover {
+      color: $black;
+    }
+  }
+
+  .grid,
+  .icon-grid {
+    background-color: $white;
+
+    i {
+      color: $deep-blue;
+    }
+
+    strong {
+      color: $deep-blue;
+      font-weight: bold;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// General
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+button,
+.button {
+  font-family: $sans-serif;
+}
+
+header h1 {
+  font-size: 3rem;
+  padding-top: 4rem;
+}
+
+@media screen and (min-width: 769px) {
+  h1 {
+    font-size: 4rem;
+    padding-top: 8rem;
+  }
+}
+
+h2,
+.blog h3 {
+  margin-top: 3rem;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.m-img {
+  margin: 1rem 0 2rem;
+}
+
+
+
+// Container
+.container {
+  margin: 0 5%;
+}
+
+@media screen and (min-width: 200px) {
+  .container {
+    margin: 0 4%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .container {
+    margin: 0 7.5%;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .container {
+    margin: 0 10%;
+  }
+}
+
+
+
+// Header
+header {
+
+  a {
+    padding: 1rem 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin: 2rem 0;
+  }
+
+  span {
+    display: block;
+  }
+
+  button {
+    margin-bottom: 1rem;
+  }
+
+  nav {
+    min-height: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  header span {
+    display: none;
+  }
+}
+
+.simple-header {
+  min-height: 70vh;
+}
+
+.simple-nav .logo {
+  margin-bottom: -4px;
+  padding: 1rem 0;
+
+  img {
+    height: 2rem;
+  }
+}
+
+header .hamburger-div,
+header nav {
+  text-align: right;
+}
+
+.hamburger-div i {
+  display: block;
+}
+
+.hamburger {
+  font-size: 2.2em;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 769px) {}
+
+@media screen and (min-width: 769px) {
+  .hamburger-div {
+    display: none;
+  }
+
+  header .hide {
+    display: flex !important;
+  }
+}
+
+
+
+// Home
+.grid,
+.icon-grid {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.large-grid .push-middle,
+.features {
+  padding: 2.5%;
+}
+
+.icon-grid {
+
+  i {
+    font-size: 7rem;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    margin-bottom: 1rem;
+    width: 40%;
+  }
+}
+
+
+
+// Footer
+footer {
+  margin-top: 2rem;
+  padding: 2rem 0;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  div {
+    text-align: center;
+  }
+
+  a {
+    display: block;
+  }
+}
+
+.footer-m, .footer-sm {
+  text-align: center;
+}
+
+.footer-m .copy {
+  div {
+    margin-top: .5rem;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .footer-m div {
+    margin-top: 0;
+    // text-align: right;
+  }
+}
+
+
+
+.carousel {
+  overflow: hidden;
+
+  div {
+    position: relative;
+    transition: 1s;
+    white-space: nowrap;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+
+
+// Blog
+.blog ul {
+  margin-top: 3rem;
+}
+
+
+
+// Pricing
+.pricing {
+  margin-top: 1rem;
+
+  .header {
+    text-align: center;
+  }
+
+  .pricing .header {
+    text-align: center;
+  }
+
+  .price {
+    display: block;
+    font-size: 4rem;
+    padding: 2.5rem 0 2rem;
+  }
+
+  .name {
+    display: block;
+    font-size: 1.5rem;
+    padding: .75rem 0;
+  }
+
+  .features {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .features li {
+    display: block;
+    margin: .5rem auto;
+  }
+}
