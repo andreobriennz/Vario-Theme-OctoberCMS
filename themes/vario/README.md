@@ -1,10 +1,8 @@
-Vario Theme
-
+# Vario Theme
 Version 0.1.0 (Stable Beta)
 Updated 29 June 2017
-==========
 
-# Vario Theme - Details
+## Vario Theme - Details
 
 Vario is a clean, modern, mobile-first theme built for 2017! Vario is built to load quickly, with lightweight file sizes. It's also easily customisable, and can be edited either with simple HTML via the CMS area (or a code editor), or via the Static Pages plugin.
 
@@ -21,4 +19,4 @@ The theme is built on the modern Kube framework (https://imperavi.com/kube/), wh
   - A carousel
   - Additional components for tabs, breadcrumbs, pricing plans and more
 
-# Vario Theme - Documentation
+## Vario Theme - Documentation
