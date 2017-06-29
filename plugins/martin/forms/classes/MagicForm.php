@@ -4,6 +4,7 @@
 
     use AjaxException, Lang, Redirect, Request, Session, Validator;
     use Cms\Classes\ComponentBase;
+    use Illuminate\Support\Facades\Event;
     use October\Rain\Exception\ApplicationException;
     use October\Rain\Exception\ValidationException;
     use October\Rain\Support\Facades\Flash;
@@ -113,9 +114,10 @@
                     throw new ValidationException($validator);
                 } else {
                     throw new AjaxException($this->exceptionResponse($validator, [
-                        'type'  => 'danger',
-                        'title' => $message,
-                        'list'  => $validator->messages()->all(),
+                        'type'    => 'danger',
+                        'title'   => $message,
+                        'list'    => $validator->messages()->all(),
+                        'jscript' => $this->property('js_on_error'),
                     ]));
                 }
 
@@ -134,7 +136,7 @@
 
                 # VALIDATE ALL + CAPTCHA EXISTS
                 if($validator->fails()) {
-                                    
+
                     # THROW ERRORS
                     if($this->property('inline_errors') == 'display') {
                         throw new ValidationException($validator);
@@ -142,6 +144,7 @@
                         throw new AjaxException($this->exceptionResponse($validator, [
                             'type'    => 'danger',
                             'content' => Lang::get('martin.forms::lang.validation.recaptcha_error'),
+                            'jscript' => $this->property('js_on_error'),
                         ]));
                     }
 
@@ -151,6 +154,9 @@
 
             # REMOVE EXTRA FIELDS FROM STORED DATA
             unset($post['_token'], $post['g-recaptcha-response'], $post['_session_key'], $post['_uploader']);
+
+            # FIRE BEFORE SAVE EVENT
+            Event::fire('martin.forms.beforeSaveRecord', [&$post]);
 
             # SAVE RECORD TO DATABASE
             $record = new Record;
@@ -166,9 +172,12 @@
 
             # SEND AUTORESPONSE EMAIL
             if($this->property('mail_resp_enabled')) {
-                SendMail::sendAutoResponse($post[$this->property('mail_resp_field')], $this->property('mail_resp_from'), $this->property('mail_resp_subject'), $post);
+                SendMail::sendAutoResponse($this->getProperties(), $post);
             }
             
+            # FIRE AFTER SAVE EVENT
+            Event::fire('martin.forms.afterSaveRecord', [&$post]);
+
             # CHECK FOR REDIRECT
             if(filter_var($this->property('redirect'), FILTER_VALIDATE_URL)) {
                 return Redirect::to($this->property('redirect'));
@@ -206,13 +215,27 @@
         }
 
         private function prepareJavaScript() {
+
             $code = false;
-            if($this->isReCaptchaEnabled())   { $code .= $content = $this->renderPartial('@js/recaptcha.js'); }
+
+            /* SUCCESS JS */
+            if($this->property('js_on_success') != '') {
+                $code .= $this->property('js_on_success');
+            }
+
+            /* RECAPTCHA JS */
+            if($this->isReCaptchaEnabled()) {
+                $code .= $content = $this->renderPartial('@js/recaptcha.js');
+            }
+
+            /* RESET FORM JS */
             if($this->property('reset_form')) {
                 $code .= $content = $this->renderPartial('@js/reset-form.js', ['id' => '#' . $this->alias . '_forms_flash']);
                 if($this->property('uploader_enable')) { $code .= $content = $this->renderPartial('@js/reset-uploader.js', ['id' => $this->alias]); }
             }
+
             return $code;
+
         }
 
         private function getIP() {

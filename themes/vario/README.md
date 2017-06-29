@@ -1,6 +1,5 @@
 # Vario Theme
-Version 0.1.0 (Stable Beta)
-Updated 29 June 2017
+Version 1.0.0
 
 ## Vario Theme - Details
 
@@ -20,3 +19,8 @@ The theme is built on the modern Kube framework (https://imperavi.com/kube/), wh
   - Additional components for tabs, breadcrumbs, pricing plans and more
 
 ## Vario Theme - Documentation
+
+If editing HTML, use the standard vario.htm layout file for each page. If editing via Static Pages plugin, use the vario-static.htm layout file.
+
+Support for Static Pages plugin is in beta, and may require a small amount of setup. If using the static header you will need to change the component HTML for the CSS to apply correctly, and to change the logo. You can see an example of this here: https://github.com/andreobriennz/Vario-Theme-OctoberCMS/tree/master/plugins/rainlab/pages/components/staticmenu
+However this only applies if editing the header with the static pages plugin.

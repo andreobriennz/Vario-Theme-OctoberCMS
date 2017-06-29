@@ -67,6 +67,20 @@
                     'group'             => 'martin.forms::lang.components.shared.group_mail',
                     'showExternalParam' => false
                 ],
+                'mail_replyto' => [
+                    'title'             => 'martin.forms::lang.components.shared.mail_replyto.title',
+                    'description'       => 'martin.forms::lang.components.shared.mail_replyto.description',
+                    'type'              => 'string',
+                    'group'             => 'martin.forms::lang.components.shared.group_mail',
+                    'showExternalParam' => false
+                ],
+                'mail_template' => [
+                    'title'             => 'martin.forms::lang.components.shared.mail_template.title',
+                    'description'       => 'martin.forms::lang.components.shared.mail_template.description',
+                    'type'              => 'string',
+                    'group'             => 'martin.forms::lang.components.shared.group_mail',
+                    'showExternalParam' => false
+                ],
                 'mail_resp_enabled' => [
                     'title'             => 'martin.forms::lang.components.shared.mail_resp_enabled.title',
                     'description'       => 'martin.forms::lang.components.shared.mail_resp_enabled.description',
@@ -95,6 +109,13 @@
                     'group'             => 'martin.forms::lang.components.shared.group_mail_resp',
                     'showExternalParam' => false
                 ],
+                'mail_resp_template' => [
+                    'title'             => 'martin.forms::lang.components.shared.mail_template.title',
+                    'description'       => 'martin.forms::lang.components.shared.mail_template.description',
+                    'type'              => 'string',
+                    'group'             => 'martin.forms::lang.components.shared.group_mail_resp',
+                    'showExternalParam' => false
+                ],
                 'reset_form' => [
                     'title'             => 'martin.forms::lang.components.shared.reset_form.title',
                     'description'       => 'martin.forms::lang.components.shared.reset_form.description',
@@ -118,12 +139,17 @@
                     'group'             => 'martin.forms::lang.components.shared.group_settings',
                     'showExternalParam' => false
                 ],
-                'anonymize_ip' => [
-                    'title'             => 'martin.forms::lang.components.shared.anonymize_ip.title',
-                    'description'       => 'martin.forms::lang.components.shared.anonymize_ip.description',
-                    'type'              => 'dropdown',
-                    'options'           => ['disabled' => 'martin.forms::lang.components.shared.anonymize_ip.disabled', 'partial' => 'martin.forms::lang.components.shared.anonymize_ip.partial', 'full' => 'martin.forms::lang.components.shared.anonymize_ip.full'],
-                    'default'           => 'disabled',
+                'js_on_success' => [
+                    'title'             => 'martin.forms::lang.components.shared.js_on_success.title',
+                    'description'       => 'martin.forms::lang.components.shared.js_on_success.description',
+                    'type'              => 'text',
+                    'group'             => 'martin.forms::lang.components.shared.group_settings',
+                    'showExternalParam' => false
+                ],
+                'js_on_error' => [
+                    'title'             => 'martin.forms::lang.components.shared.js_on_error.title',
+                    'description'       => 'martin.forms::lang.components.shared.js_on_error.description',
+                    'type'              => 'text',
                     'group'             => 'martin.forms::lang.components.shared.group_settings',
                     'showExternalParam' => false
                 ],
@@ -131,6 +157,15 @@
                     'title'             => 'martin.forms::lang.components.shared.allowed_fields.title',
                     'description'       => 'martin.forms::lang.components.shared.allowed_fields.description',
                     'type'              => 'stringList',
+                    'group'             => 'martin.forms::lang.components.shared.group_security',
+                    'showExternalParam' => false
+                ],
+                'anonymize_ip' => [
+                    'title'             => 'martin.forms::lang.components.shared.anonymize_ip.title',
+                    'description'       => 'martin.forms::lang.components.shared.anonymize_ip.description',
+                    'type'              => 'dropdown',
+                    'options'           => ['disabled' => 'martin.forms::lang.components.shared.anonymize_ip.disabled', 'partial' => 'martin.forms::lang.components.shared.anonymize_ip.partial', 'full' => 'martin.forms::lang.components.shared.anonymize_ip.full'],
+                    'default'           => 'disabled',
                     'group'             => 'martin.forms::lang.components.shared.group_security',
                     'showExternalParam' => false
                 ],
