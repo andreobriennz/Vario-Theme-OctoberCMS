@@ -25,9 +25,10 @@
 
 
 
-    // Define image ids, divId and how long each image should last (5000 by default)
+    // Define an array of image IDs for carosel
     var imageIds = ["#image1", "#image2", "#image3", "#image4", "#image5", "#image6", "#image7"];
 
+    // State the array of images for the carosel, as well as the ID of the carosel element, and how often each image should change 
     carousel(imageIds, "carousel", 5000);
 
   });

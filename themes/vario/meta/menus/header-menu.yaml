@@ -1,40 +1,76 @@
 name: 'Header menu'
 items:
     -
-        title: Home
+        title: Logo
+        nesting: ''
         type: url
-        url: /
+        url: logo
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '1'
+            cssClass: logo
+            isExternal: '0'
+    -
+        title: Home
+        nesting: ''
+        type: url
+        url: /static
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: About
+        nesting: ''
+        type: url
+        url: /about/static
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Components
+        type: url
+        url: /components
         code: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
-        title: 'About Us'
+        title: Blog
+        nesting: ''
         type: url
-        url: /about-us
+        url: /blog
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
-        items:
-            -
-                title: 'New menu item'
-                type: url
-                url: /
-                code: ''
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
-                items:
-                    -
-                        title: 'New menu item2'
-                        type: url
-                        url: /2
-                        code: ''
-                        viewBag:
-                            isHidden: '0'
-                            cssClass: ''
-                            isExternal: '0'
+    -
+        title: Contact
+        nesting: ''
+        type: url
+        url: /contact/static
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'

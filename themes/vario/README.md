@@ -1,55 +1,24 @@
-Demo Theme
+Vario Theme
+
+Version 0.1.0 (Stable Beta)
+Updated 29 June 2017
 ==========
 
-OctoberCMS demo theme that demonstrates the basic core functionality and utilizes the accompanying demo plugin. It is a great theme to copy when building a site from scratch. 
+# Vario Theme - Details
 
-The theme acts as a reference implementation for default component markup when distributing plugins.
+Vario is a clean, modern, mobile-first theme built for 2017! Vario is built to load quickly, with lightweight file sizes. It's also easily customisable, and can be edited either with simple HTML via the CMS area (or a code editor), or via the Static Pages plugin.
 
-Have fun!
+The theme is built on the modern Kube framework (https://imperavi.com/kube/), which emphisises design, minimalism and typography. It uses an easily customisable flexbox grid (https://imperavi.com/kube/docs).
 
-## Clean up instructions
+## Features
 
-If you clone this theme to use as a starting point. You may follow these instructions to clean up:
+- Different color themes (".red-theme", ".silver-theme" default white) which can be changed by simply changing the class on the body tag. You can also remove the class for the default white theme which can easily be customised with your own colors.
+- Three pages, plus a blog
+- Multiple components ready to be added including:
+  - Three header variations
+  - Three footer styles
+  - Three grid patterns
+  - A carousel
+  - Additional components for tabs, breadcrumbs, pricing plans and more
 
-1. Delete the `pages/ajax.htm` and `pages/plugins.htm` files.
-2. Delete the `partials/calcresult.htm` partial file.
-3. Delete the `partials/explain/` directory and contents.
-4. Delete the `content/placeholder/` directory and contents.
-
-## Combining CSS and JavaScript
-
-This theme doesn't combine assets for performance reasons. To combine the stylesheets, replace the following lines in the default layout. When combining with this theme, we recommend enabling the config `enableAssetDeepHashing` in the file **config/cms.php**.
-
-Uncombined stylesheets:
-
-    <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
-    <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
-
-Combined stylesheets:
-
-    <link href="{{ [
-        '@framework.extras',
-        'assets/less/vendor.less',
-        'assets/less/theme.less'
-    ]|theme }}" rel="stylesheet">
-
-> **Note**: October also includes an SCSS compiler, if you prefer.
-
-Uncombined JavaScript:
-
-    <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
-    <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
-    <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
-    {% framework extras %}
-
-Combined JavaScript:
-
-    <script src="{{ [
-        '@jquery',
-        '@framework',
-        '@framework.extras',
-        'assets/vendor/bootstrap.js',
-        'assets/javascript/app.js'
-    ]|theme }}"></script>
-
-> **Important**: Make sure you keep the `{% styles %}` and `{% scripts %}` placeholder tags as these are used by plugins for injecting assets.
+# Vario Theme - Documentation

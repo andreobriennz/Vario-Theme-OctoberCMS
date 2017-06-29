@@ -1,15 +1,21 @@
-{% for item in items if not item.viewBag.isHidden %}
-    <li role="presentation" class="{{ item.isActive ? 'active' : '' }} {{ item.isChildActive ? 'child-active' : '' }} {{ item.viewBag.cssClass }}">
-        {% if item.url %}
-            <a href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }}>
-                {{ item.title }}
-            </a>
-        {% else %}
-            <span>{{ item.title }}</span>
-        {% endif %}
+<header>
 
-        {% if item.items %}
-            <ul>{% partial __SELF__ ~ "::items" items=item.items %}</ul>
-        {% endif %}
-    </li>
-{% endfor %}
+  <div class="hamburger-div"><i data-component="toggleme" data-target="#nav" class="kube-menu hamburger"></i></div>
+  <nav id="nav" class="simple-nav container nav row align-center align-middle hide">
+
+  <!-- Logo -->
+  <a href="/" class="logo"><img src="{{ 'assets/images/logo.png'|theme }}" alt="Logo" height="32"></a>
+
+  {% for item in items if not item.viewBag.isHidden %}
+    {% if item.url %}
+      <a href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }}>
+        {{ item.title }}
+      </a>
+    {% else %}
+      <span>{{ item.title }}</span>
+    {% endif %}
+
+  {% endfor %}
+
+  </nav>
+</header>

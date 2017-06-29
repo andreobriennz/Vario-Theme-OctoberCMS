@@ -305,7 +305,8 @@ footer {
     transition: 1s;
     white-space: nowrap; }
   .carousel img {
-    width: 100%; }
+    width: 100%;
+    border-radius: .2rem; }
 
 .blog ul {
   margin-top: 3rem; }
