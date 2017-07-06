@@ -264,6 +264,10 @@ $black: #393939;
 
 
 // General
+body {
+  height: 100vh;
+}
+
 *,
 h1,
 h2,
@@ -365,6 +369,7 @@ header {
   nav {
     min-height: 3.5rem;
   }
+
 }
 
 @media screen and (min-width: 769px) {
@@ -439,6 +444,9 @@ header nav {
   }
 }
 
+.features h2 {
+  text-align: center;
+}
 
 
 // Footer
@@ -450,7 +458,7 @@ footer {
     margin-bottom: 0;
   }
 
-  div {
+  a {
     text-align: center;
   }
 
@@ -459,9 +467,7 @@ footer {
   }
 }
 
-.footer-m, .footer-sm {
-  text-align: center;
-}
+
 
 .footer-m .copy {
   div {
@@ -474,6 +480,12 @@ footer {
   .footer-m div {
     margin-top: 0;
     // text-align: right;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .footer-m, .footer-sm {
+    text-align: center;
   }
 }
 
@@ -538,4 +550,9 @@ footer {
     display: block;
     margin: .5rem auto;
   }
+}
+
+// Contact
+input, textarea {
+  margin-bottom: 0.75em;
 }
