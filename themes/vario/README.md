@@ -1,5 +1,4 @@
 # Vario Theme
-Version 1.0.0
 
 ## Vario Theme - Details
 
@@ -24,3 +23,7 @@ If editing HTML, use the standard vario.htm layout file for each page. If editin
 
 Support for Static Pages plugin is in beta, and may require a small amount of setup. If using the static header you will need to change the component HTML for the CSS to apply correctly, and to change the logo. You can see an example of this here: https://github.com/andreobriennz/Vario-Theme-OctoberCMS/tree/master/plugins/rainlab/pages/components/staticmenu
 However this only applies if editing the header with the static pages plugin.
+
+## Version History
+1.0.1: Theme initialization
+1.0.2: Tweeks to styling, html and contact form
